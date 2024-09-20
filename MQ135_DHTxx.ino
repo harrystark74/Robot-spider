@@ -42,5 +42,5 @@ void loop() {
   Serial.print(correctedPPM);
   Serial.println("ppm");
 
-  delay(300);
+  delay(300);//cập nhật giá trị sau mỗi 300 miligiây
 }
