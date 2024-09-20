@@ -1,10 +1,5 @@
 #include <TinyGPSPlus.h>
 #include <SoftwareSerial.h>
-/*
-   This sample code demonstrates the normal use of a TinyGPSPlus (TinyGPSPlus) object.
-   It requires the use of SoftwareSerial, and assumes that you have a
-   4800-baud serial GPS device hooked up on pins 4(rx) and 3(tx).
-*/
 static const int RXPin = 4, TXPin = 3;
 static const uint32_t GPSBaud = 4800;
 
@@ -48,8 +43,8 @@ void loop()
     (unsigned long)TinyGPSPlus::distanceBetween(
       gps.location.lat(),
       gps.location.lng(),
-      LONDON_LAT, 
-      LONDON_LON) / 1000;
+      TPHCM_LAT, 
+      TPHCM_LON) / 1000;
   printInt(distanceKmToTPHCM, gps.location.isValid(), 9);
 
   double courseToTPHCM =
